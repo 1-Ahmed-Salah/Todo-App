@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variables */
+:root {
+    --main-color: #E3F2FD;
+    --blue-dark: #2196F3;
+    --blue-light: #42A5F5;
+    --gray: #607D8B;
+    --red: #F44336;
+}
+
+/* Global Style */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+.app {
+    background-color: var(--main-color);
+    min-height: 100vh;
+}
+
+.app.dark {
+    background-color: #282C2F;
+}
+
+/* Header */
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.header .container .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header .container .icon {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.app.dark .header .container .title, .app.dark .header .container .icon {color: #fff;}
+/* Form */
+
+.insert-data {
+    padding: 40px 0;
+}
+
+.insert-data  form input , button {
+    width: 100%;
+    border: none;
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+
+.insert-data  form input {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.insert-data form button {
+    background-color: var(--blue-dark);
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.insert-data form button:hover {
+    background-color: var(--blue-light);
+}
+
+/* TODO Data */
+.todo {
+    padding: 30px 0;
+}
+
+.todo .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.todo .data {
+    display: flex;
+    flex-direction: column;
+    background-color: #BBDEFB;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.todo .data .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+.todo .data .desc {
+    font-size: 16px;
+}
+
+.todo .data .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.todo .data .actions .trash {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo .data .actions .trash {background-color: var(--red);}
+
+
+
+
+
